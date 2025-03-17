@@ -1,0 +1,15 @@
+## Interface: 110100
+## Title: PaulieRaidTools
+## Notes: Paulie's raid tools for minimum raid time tech support
+## Author: Paulie
+## Version: 0.1.0
+## Dependencies: WeakAuras
+## X-Curse-Project-ID: 999999
+## SavedVariables: PRTAddonDB
+## SavedVariablesPerCharacter:
+
+embeds.xml
+main.lua
+communications.lua
+versioncheck.lua
+gui.lua
