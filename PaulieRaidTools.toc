@@ -2,7 +2,7 @@
 ## Title: PaulieRaidTools
 ## Notes: Paulie's raid tools for minimum raid time tech support
 ## Author: Paulie
-## Version: 0.1
+## Version: 0.2b
 ## Dependencies: WeakAuras
 ## X-Curse-Project-ID: 999999
 ## SavedVariables: PRTAddonDB
