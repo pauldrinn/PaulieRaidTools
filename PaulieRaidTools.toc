@@ -13,3 +13,4 @@ main.lua
 communications.lua
 versioncheck.lua
 gui.lua
+pi.lua

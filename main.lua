@@ -17,7 +17,7 @@ function PRTAddon:OnInitialize()
 end
 
 function PRTAddon:OnEnable()
-    ---
+    self:RegisterEvent("INSPECT_READY")
 end
 
 function PRTAddon:OnDisable()
@@ -26,14 +26,23 @@ function PRTAddon:OnDisable()
 end
 
 function PRTAddon:SlashCommand(input)
-    local ownAuras = self:GetOwnWeakAuras()
+    local command = self:GetArgs(input)
 
-    self.receivedWAData = {}
-    self.receivedWAData[UnitName("player")] = ownAuras
-    self:BroadcastVersionCheck()
+    if command == "pi" then
+        self:CalculateAndDisplayPIGains()
+    elseif command == "wa" then
+        local ownAuras = self:GetOwnWeakAuras()
 
-    self:Draw()
-    -- self:Draw()
+        self.receivedWAData = {}
+        self.receivedWAData[UnitName("player")] = ownAuras
+        self:BroadcastVersionCheck()
+
+        self:Draw()
+    else
+        self:Print("PRT Usage:  ")
+        self:Print("/prt wa - Show WA check panel")
+        self:Print("/prt pi - Display optimal Power Infusion targets")
+    end
 end
 
 function PRTAddon:LoadData()
